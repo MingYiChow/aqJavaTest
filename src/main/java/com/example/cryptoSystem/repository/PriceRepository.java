@@ -1,0 +1,11 @@
+package com.example.cryptoSystem.repository;
+
+import com.example.cryptoSystem.entity.Price;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface PriceRepository extends JpaRepository<Price,Long> {
+    Optional<Price> findBySymbol(String symbol);
+//     Optional<Price> findBySymbolIgnoreCase (String symbol);
+}
