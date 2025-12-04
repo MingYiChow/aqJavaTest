@@ -25,6 +25,7 @@ public class CryptoSystemApplication {
     CommandLineRunner init(WalletRepository walletRepository) {
         return args -> {
             walletRepository.save(new Wallet("Adam", "adam@gmail.com", "USDT", "50000"));
+            walletRepository.save(new Wallet("Jimmy", "jimmy@gmail.com", "USDT", "50000"));
         };
     }
 
